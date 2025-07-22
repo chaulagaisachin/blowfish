@@ -199,13 +199,13 @@
   <script>
 
     const firebaseConfig = {
-      apiKey: {{ $.Site.Params.firebase.apiKey }},
-      authDomain: {{ $.Site.Params.firebase.apiKey }},
-      projectId: {{ $.Site.Params.firebase.projectId }},
-      storageBucket: {{ $.Site.Params.firebase.storageBucket }},
-      messagingSenderId: {{ $.Site.Params.firebase.messagingSenderId }},
-      appId: {{ $.Site.Params.firebase.appId }},
-      measurementId: {{ $.Site.Params.firebase.measurementId }}
+      apiKey: "{{ $.Site.Params.firebase.apiKey }}",
+      authDomain: "{{ $.Site.Params.firebase.authDomain }}",
+      projectId: "{{ $.Site.Params.firebase.projectId }}",
+      storageBucket: "{{ $.Site.Params.firebase.storageBucket }}",
+      messagingSenderId: "{{ $.Site.Params.firebase.messagingSenderId }}",
+      appId: "{{ $.Site.Params.firebase.appId }}",
+      measurementId: "{{ $.Site.Params.firebase.measurementId }}"
     };
 
     var app = firebase.initializeApp(firebaseConfig);
@@ -218,6 +218,6 @@
 
   {{/* Advertisement */}}
   {{ with .Site.Params.advertisement.adsense }}
-    <meta name="google-adsense-account" content="{{ . }}">
+    <meta name="google-adsense-account" content="ca-pub-2500038021915641">
   {{ end }}
 </head>
