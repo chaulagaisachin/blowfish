@@ -31,6 +31,23 @@
         {{ . | markdownify }}
       </h2>
     {{ end }}
+    <div id="typing-headline" class="text-xl text-neutral-500 dark:text-neutral-400 min-h-[2.5rem] mb-4">
+      <!-- Typing animation will appear here -->
+    </div>
+    <script>
+      // Typing animation for headline
+      const headlineText = "DevOps Engineer @ ThreatDefence | Cloud & Cyber Security | Future DevSecOps Lead";
+      const typingDiv = document.getElementById("typing-headline");
+      let i = 0;
+      function typeWriter() {
+        if (i <= headlineText.length) {
+          typingDiv.textContent = headlineText.substring(0, i);
+          i++;
+          setTimeout(typeWriter, 40);
+        }
+      }
+      typeWriter();
+    </script>
     <div class="mt-1 text-2xl">
       {{ partialCached "author-links.html" . }}
     </div>
